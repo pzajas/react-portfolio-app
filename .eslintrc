@@ -40,6 +40,9 @@
     ],
 
     "import/no-unresolved": [0, { "caseSensitive": false }],
-    "react/react-in-jsx-scope": "off"
+
+    "react/react-in-jsx-scope": "off",
+
+    "@typescript-eslint/no-explicit-any": "warn"
   }
 }
