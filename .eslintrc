@@ -20,6 +20,14 @@
       }
     }
   },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/import/no-unresolved": "off"
+      }
+    }
+  ],
   "rules": {
     "no-unused-vars": [
       "error",
@@ -30,6 +38,8 @@
         "argsIgnorePattern": "^_"
       }
     ],
+
+    "import/no-unresolved": [0, { "caseSensitive": false }],
     "react/react-in-jsx-scope": "off"
   }
 }
