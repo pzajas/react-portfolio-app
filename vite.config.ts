@@ -48,6 +48,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@components': '/src/components',
+      '@elements': '/src/elements',
     },
   },
   plugins: [react(), VitePWA(manifestForPlugIn)],
