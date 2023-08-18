@@ -32,6 +32,7 @@
     }
   ],
   "rules": {
+    "semi": 0,
     "simple-import-sort/imports": [
       "error",
       {

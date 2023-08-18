@@ -1,23 +1,25 @@
 import { styled } from 'styled-components'
 
-const HeroSection = () => {
+const FooterSection = () => {
   return (
     <StyledHeroContainer>
       <StyledHeroText>
-        <h1>Hello there!</h1>
+        <h1>Footer Section</h1>
       </StyledHeroText>
+
       <StyledHeroButtonContainer></StyledHeroButtonContainer>
     </StyledHeroContainer>
   )
 }
 
-export default HeroSection
+export default FooterSection
+
 const StyledHeroContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  background-color: #181818;
+  height: 10vh;
+  background-color: green;
   margin-top: 0;
   color: white;
   gap: 0.1em;

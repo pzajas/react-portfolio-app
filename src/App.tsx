@@ -1,15 +1,28 @@
-import {styled} from 'styled-components'
+import { styled } from 'styled-components'
 
 import { Menu } from '@components/menus/HamburgerMenu'
 import { PrimaryNavbar } from '@components/navbars/PrimaryNavbar'
 
-import HeroSection from './components/sections/HeroSection'
+import {
+  AboutSection,
+  ContactSection,
+  FooterSection,
+  HeroSection,
+  ProjectSection,
+  SkillSection,
+} from './components/sections/xindex'
 
 const App = () => {
   return (
     <StyledWebsiteContainer>
       <PrimaryNavbar />
-      <HeroSection/>
+
+      <HeroSection />
+      <AboutSection />
+      <SkillSection />
+      <ProjectSection />
+      <ContactSection />
+      <FooterSection />
 
       <Menu />
     </StyledWebsiteContainer>
@@ -25,6 +38,6 @@ const StyledWebsiteContainer = styled.div`
   height: 100vh;
 
   & * {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 `

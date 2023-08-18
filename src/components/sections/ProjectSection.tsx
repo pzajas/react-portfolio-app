@@ -1,17 +1,19 @@
 import { styled } from 'styled-components'
 
-const HeroSection = () => {
+const ProjectSection = () => {
   return (
     <StyledHeroContainer>
       <StyledHeroText>
-        <h1>Hello there!</h1>
+        <h1>Project Section</h1>
       </StyledHeroText>
+
       <StyledHeroButtonContainer></StyledHeroButtonContainer>
     </StyledHeroContainer>
   )
 }
 
-export default HeroSection
+export default ProjectSection
+
 const StyledHeroContainer = styled.div`
   display: flex;
   flex-direction: column;
