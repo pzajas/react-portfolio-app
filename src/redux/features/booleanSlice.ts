@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
 export interface IBoolean {
   isMenuVisible: boolean
@@ -12,7 +12,7 @@ const slice = createSlice({
   name: 'boolean',
   initialState,
   reducers: {
-    setIsMenuVisible: (state, action) => {
+    setIsMenuVisible: (state, action: PayloadAction<boolean>) => {
       state.isMenuVisible = action.payload
     },
   },

@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist'
-import rootReducer from '../reducers/rootReducer'
+import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER,REHYDRATE } from 'redux-persist'
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
 import storage from 'redux-persist/lib/storage'
+
+import { configureStore } from '@reduxjs/toolkit'
+
+import rootReducer from '../reducers/rootReducer'
 
 const persistConfig = {
   key: 'root',

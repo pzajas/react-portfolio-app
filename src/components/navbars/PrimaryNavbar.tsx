@@ -1,9 +1,10 @@
-import { setIsMenuVisible } from '@redux/features/booleanSlice'
 import { FunctionComponent } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
 import { styled } from 'styled-components'
 import { IRootState } from 'typescript/types'
+
+import { setIsMenuVisible } from '@redux/features/booleanSlice'
 
 export const PrimaryNavbar: FunctionComponent = () => {
   const { isMenuVisible } = useSelector((state: IRootState) => state.boolean)
