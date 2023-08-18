@@ -49,6 +49,7 @@ export default defineConfig({
     alias: {
       '@components': '/src/components',
       '@elements': '/src/elements',
+      '@redux': '/src/redux',
     },
   },
   plugins: [react(), VitePWA(manifestForPlugIn)],

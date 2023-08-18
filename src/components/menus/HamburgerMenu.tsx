@@ -1,16 +1,21 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { setIsMenuVisible } from '@redux/features/booleanSlice'
 import { styled } from 'styled-components'
+import { IRootState } from 'typescript/types'
 
 interface SideMenuProps {
   isMenuVisible: boolean
-  setIsMenuVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const Menu = ({ isMenuVisible, setIsMenuVisible }: SideMenuProps) => {
+export const Menu = () => {
+  const { isMenuVisible } = useSelector((state: IRootState) => state.boolean)
+  const dispatch = useDispatch()
+
   const toggleMenu = () => {
-    setIsMenuVisible(!isMenuVisible)
+    dispatch(setIsMenuVisible(!isMenuVisible))
   }
 
-  return <SideMenu setIsMenuVisible={setIsMenuVisible} isMenuVisible={isMenuVisible} onClick={toggleMenu} />
+  return <SideMenu isMenuVisible={isMenuVisible} onClick={toggleMenu}></SideMenu>
 }
 
 const SideMenu = styled.nav<SideMenuProps>`
@@ -24,3 +29,5 @@ const SideMenu = styled.nav<SideMenuProps>`
 
   transform: translateX(${(props) => (props.isMenuVisible ? '0' : '100%')});
 `
+
+export default Menu
