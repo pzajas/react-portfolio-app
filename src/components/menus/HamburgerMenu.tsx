@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { setIsMenuVisible } from '@redux/features/booleanSlice'
 import { styled } from 'styled-components'
 import { IRootState } from 'typescript/types'
+
+import { setIsMenuVisible } from '@redux/features/booleanSlice'
 
 interface SideMenuProps {
   isMenuVisible: boolean
