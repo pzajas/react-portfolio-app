@@ -1,20 +1,21 @@
+import { setIsMenuVisible } from '@redux/features/booleanSlice'
 import { FunctionComponent } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
+import { useDispatch, useSelector } from 'react-redux'
 import { styled } from 'styled-components'
+import { IRootState } from 'typescript/types'
 
-interface PrimaryNavbarProps {
-  setIsMenuVisible: React.Dispatch<React.SetStateAction<boolean>>
-}
+export const PrimaryNavbar: FunctionComponent = () => {
+  const { isMenuVisible } = useSelector((state: IRootState) => state.boolean)
+  const distaptch = useDispatch()
 
-export const PrimaryNavbar: FunctionComponent<PrimaryNavbarProps> = ({ setIsMenuVisible }) => {
   const handleToggleMenu = () => {
-    setIsMenuVisible((prevState) => !prevState)
+    distaptch(setIsMenuVisible(!isMenuVisible))
   }
 
   return (
     <NavbarContainer>
       <NavbarLogo style={{ fontSize: 20, alignSelf: 'center' }}>Logo</NavbarLogo>
-
       <NavbarIcon size={30} onClick={handleToggleMenu} />
     </NavbarContainer>
   )
