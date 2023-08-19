@@ -50,6 +50,7 @@ export default defineConfig({
     alias: {
       '@components': '/src/components',
       '@elements': '/src/elements',
+      '@assets': '/src/assets',
       '@redux': '/src/redux',
     },
   },

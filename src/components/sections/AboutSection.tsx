@@ -1,58 +1,25 @@
 import { styled } from 'styled-components'
 
+import PrimarySection from '@components/layouts/PrimarySection'
+
 const AboutSection = () => {
   return (
-    <StyledHeroContainer>
-      <StyledHeroText>
-        <h1>About Section</h1>
-      </StyledHeroText>
-
-      <StyledHeroButtonContainer></StyledHeroButtonContainer>
-    </StyledHeroContainer>
+    <PrimarySection sectionText="Who is this guy?">
+      <StyledParagraph>
+        Hey, I am Peter, a passionate frontend developer specializing in the art of React. With an unwavering love for
+        crafting interactive digital experiences, I thrive on turning complex ideas into elegant user interfaces. My
+        journey in the world of web development began with a fascination for how lines of code could translate into
+        captivating visuals. Today, I am on a mission to bring innovation and creativity together, sculpting seamless
+        designs that resonate with users. When I am not immersed in the world of code, you can find me exploring the
+        latest design trends, seeking inspiration from everyday life, and fueling my creativity one cup of coffee at a
+        time.
+      </StyledParagraph>
+    </PrimarySection>
   )
 }
 
 export default AboutSection
 
-const StyledHeroContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  background-color: #181818;
-  margin-top: 0;
-  color: white;
-  gap: 0.1em;
-`
-const StyledHeroText = styled.div`
-  & * {
-    margin-top: 0;
-    align-items: center;
-  }
-  & h1 {
-    letter-spacing: 0.05rem;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  & span {
-    color: green;
-  }
-`
-
-const StyledHeroButtonContainer = styled.div`
-  display: flex;
-  opacity: 0;
-  animation-delay: 3s;
-  animation: slideInFromLeft 1s 1.5s forwards;
-
-  @keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
+const StyledParagraph = styled.p`
+  font-size: 1.2rem;
 `

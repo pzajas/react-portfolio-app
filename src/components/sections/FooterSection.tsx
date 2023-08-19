@@ -1,58 +1,43 @@
+import { BsGithub } from 'react-icons/bs'
 import { styled } from 'styled-components'
+
+import PrimarySection from '@components/layouts/PrimarySection'
 
 const FooterSection = () => {
   return (
-    <StyledHeroContainer>
-      <StyledHeroText>
-        <h1>Footer Section</h1>
-      </StyledHeroText>
-
-      <StyledHeroButtonContainer></StyledHeroButtonContainer>
-    </StyledHeroContainer>
+    <PrimarySection sectionText="Footer">
+      <StyledButtonContainer>
+        <StyledSocialIcon>
+          <BsGithub size={24} />
+        </StyledSocialIcon>
+        <StyledSocialIcon>
+          <BsGithub size={24} />
+        </StyledSocialIcon>
+        <StyledSocialIcon>
+          <BsGithub size={24} />
+        </StyledSocialIcon>
+        <StyledSocialIcon>
+          <BsGithub size={24} />
+        </StyledSocialIcon>
+      </StyledButtonContainer>
+    </PrimarySection>
   )
 }
 
 export default FooterSection
 
-const StyledHeroContainer = styled.div`
+const StyledButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 10vh;
-  background-color: green;
-  margin-top: 0;
-  color: white;
-  gap: 0.1em;
-`
-const StyledHeroText = styled.div`
-  & * {
-    margin-top: 0;
-    align-items: center;
-  }
-  & h1 {
-    letter-spacing: 0.05rem;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  & span {
-    color: green;
-  }
+  gap: 3rem;
 `
 
-const StyledHeroButtonContainer = styled.div`
+const StyledSocialIcon = styled.div`
   display: flex;
-  opacity: 0;
-  animation-delay: 3s;
-  animation: slideInFromLeft 1s 1.5s forwards;
-
-  @keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
+  place-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background-color: #202020;
+  border-radius: 2px;
 `
