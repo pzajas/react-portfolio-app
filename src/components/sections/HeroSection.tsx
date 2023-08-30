@@ -1,17 +1,28 @@
-import {styled} from 'styled-components'
+import { IoIosArrowDown } from 'react-icons/io'
+import { keyframes, styled } from 'styled-components'
+
+import PrimaryButton from '@components/buttons/PrimaryButton'
+import PrimarySection from '@components/layouts/PrimarySection'
 
 const HeroSection = () => {
   return (
-    <StyledHeroContainer>
-      <StyledHeroText>
-        <h1>
-          Hello there!
-        </h1>
-      </StyledHeroText>
+    <PrimarySection sectionText="">
+      <StyledHeroContainer>
+        <StyledHeroText>
+          <h1>
+            Hello there!<br></br> I design <span>unique</span> <br></br>web experience.
+          </h1>
+        </StyledHeroText>
 
-      <StyledHeroButtonContainer>        
-      </StyledHeroButtonContainer>
-    </StyledHeroContainer>
+        <StyledHeroButtonContainer>
+          <PrimaryButton type="button" buttonText="Projects" />
+        </StyledHeroButtonContainer>
+
+        <ArrowIconContainer>
+          <BouncingArrowIcon size={20} />
+        </ArrowIconContainer>
+      </StyledHeroContainer>
+    </PrimarySection>
   )
 }
 
@@ -21,25 +32,26 @@ const StyledHeroContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   background-color: #181818;
   margin-top: 0;
   color: white;
-  gap: 0.1em;
 `
+
 const StyledHeroText = styled.div`
+  line-height: 1.5;
   & * {
     margin-top: 0;
     align-items: center;
   }
   & h1 {
     letter-spacing: 0.05rem;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 3rem;
+    margin-bottom: 5rem;
   }
 
   & span {
-    color: green;
+    color: orange;
   }
 `
 
@@ -57,5 +69,30 @@ const StyledHeroButtonContainer = styled.div`
       transform: translateX(0);
       opacity: 1;
     }
+  }
+`
+
+const bounceAnimation = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+`
+
+const ArrowIconContainer = styled.div`
+  position: absolute;
+  bottom: 20px; /* Adjust this value to position the arrow */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  animation: ${bounceAnimation} 2s infinite; /* Apply the bounce animation */
+`
+
+const BouncingArrowIcon = styled(IoIosArrowDown)`
+  transition: transform 0.8s;
+  &:hover {
+    transform: scale(1.1);
   }
 `

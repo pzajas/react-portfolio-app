@@ -8,35 +8,34 @@ import { setIsMenuVisible } from '@redux/features/booleanSlice'
 
 export const PrimaryNavbar: FunctionComponent = () => {
   const { isMenuVisible } = useSelector((state: IRootState) => state.boolean)
-  const distaptch = useDispatch()
+  const dispatch = useDispatch()
 
   const handleToggleMenu = () => {
-    distaptch(setIsMenuVisible(!isMenuVisible))
+    dispatch(setIsMenuVisible(!isMenuVisible))
   }
 
   return (
     <NavbarContainer>
-      <NavbarLogo style={{ fontSize: 20, alignSelf: 'center' }}>Logo</NavbarLogo>
       <NavbarIcon size={30} onClick={handleToggleMenu} />
     </NavbarContainer>
   )
 }
 
 const NavbarContainer = styled.div`
+  background-color: white;
+  position: fixed;
+  top: 0;
   display: flex;
-  height: 5vh;
-  width: 100%;
+  width: 100vw;
+  height: 10vh;
   justify-content: space-between;
-  flex-direction: row;
-`
-
-const NavbarLogo = styled.p`
-  font-size: 20px;
-  align-self: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  z-index: 999;
 `
 
 const NavbarIcon = styled(AiOutlineMenu)`
-  color: white;
-  align-self: center;
-  z-index: 100;
+  color: black;
+  z-index: 999;
+  margin-right: 2rem;
 `

@@ -5,11 +5,13 @@
 }
 
 body {
-  padding: 2rem 2rem 2rem 2rem;
+  font-family: 'Poppins';
+
+  /* padding: 0rem 2rem 0rem 2rem; */
 }
 
 :root {
-  font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Arial, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.2;
   font-weight: 400;
   font-size: 62.5%;

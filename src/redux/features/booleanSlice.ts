@@ -5,7 +5,7 @@ export interface IBoolean {
 }
 
 const initialState = {
-  isMenuVisible: true,
+  isMenuVisible: false,
 }
 
 const slice = createSlice({

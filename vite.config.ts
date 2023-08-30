@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+
+import react from '@vitejs/plugin-react'
 
 const manifestForPlugIn: any = {
   registerType: 'prompt',
@@ -49,6 +50,7 @@ export default defineConfig({
     alias: {
       '@components': '/src/components',
       '@elements': '/src/elements',
+      '@assets': '/src/assets',
       '@redux': '/src/redux',
     },
   },
