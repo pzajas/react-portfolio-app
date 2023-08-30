@@ -4,7 +4,7 @@ import PrimarySection from '@components/layouts/PrimarySection'
 
 const AboutSection = () => {
   return (
-    <PrimarySection sectionText="Who is this guy?">
+    <PrimarySection sectionText="About">
       <StyledParagraph>
         Hey, I am Peter, a passionate frontend developer specializing in the art of React. With an unwavering love for
         crafting interactive digital experiences, I thrive on turning complex ideas into elegant user interfaces. My

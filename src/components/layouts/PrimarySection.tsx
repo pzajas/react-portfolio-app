@@ -1,20 +1,19 @@
 import { styled } from 'styled-components'
 
+import { SectionSeparator } from '@components/sections/SectionSeparator'
+
 const PrimarySection = ({ sectionText, children }: { sectionText: string; children: any }) => {
   return (
-    <StyledHeroContainer>
-      <StyledHeroText>
-        <h1>{sectionText}</h1>
-      </StyledHeroText>
-
+    <StyledSectionContainer>
+      <SectionSeparator separatorText={sectionText} />
       {children}
-    </StyledHeroContainer>
+    </StyledSectionContainer>
   )
 }
 
 export default PrimarySection
 
-const StyledHeroContainer = styled.div`
+const StyledSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,21 +22,5 @@ const StyledHeroContainer = styled.div`
   color: white;
   gap: 0.1em;
   padding: 2rem 2rem 2rem 2rem;
-  margin-bottom: 5rem;
   z-index: 100;
-`
-const StyledHeroText = styled.div`
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  & * {
-    margin-top: 0;
-    align-items: center;
-  }
-  & h1 {
-    letter-spacing: 0.05rem;
-    font-size: 1.5rem;
-    color: grey;
-    margin-bottom: 2rem;
-  }
 `

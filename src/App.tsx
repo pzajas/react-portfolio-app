@@ -3,7 +3,16 @@ import { styled } from 'styled-components'
 import { Menu } from '@components/menus/HamburgerMenu'
 import { PrimaryNavbar } from '@components/navbars/PrimaryNavbar'
 
-import { AboutSection, ContactSection, FooterSection, HeroSection, SkillSection } from './components/sections/xindex'
+import {
+  AboutSection,
+  ContactSection,
+  FooterSection,
+  HeroSection,
+  OfferSection,
+  ProjectSection,
+  SkillSection,
+  SocialSection,
+} from './components/sections/xindex'
 
 const App = () => {
   return (
@@ -16,8 +25,11 @@ const App = () => {
 
       <ContentContainer>
         <AboutSection />
+        <OfferSection />
         <SkillSection />
+        <ProjectSection />
         <ContactSection />
+        <SocialSection />
         <FooterSection />
       </ContentContainer>
 

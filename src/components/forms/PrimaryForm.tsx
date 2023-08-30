@@ -69,6 +69,7 @@ export default PrimaryForm
 
 const FormContainer = styled.div`
   margin: 0 auto;
+  font-family: 'Poppins';
 `
 
 const InputField = styled.input`
@@ -78,6 +79,8 @@ const InputField = styled.input`
   border: none;
   background-color: #202020;
   outline: none;
+  font-family: 'Poppins';
+
 `
 
 const TextArea = styled.textarea`
@@ -88,4 +91,5 @@ const TextArea = styled.textarea`
   background-color: #202020;
   resize: none;
   outline: none;
+  font-family: 'Poppins';
 `

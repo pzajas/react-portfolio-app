@@ -31,11 +31,11 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  /* z-index: 999; */
+  z-index: 999;
 `
 
 const NavbarIcon = styled(AiOutlineMenu)`
   color: black;
-  /* z-index: 999; */
+  z-index: 999;
   margin-right: 2rem;
 `

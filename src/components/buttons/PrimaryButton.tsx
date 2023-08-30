@@ -26,6 +26,7 @@ const StyledPrimaryButton = styled.button`
   color: orange;
   transition: all 0.5s ease-in-out;
   z-index: 10;
+  font-family: 'Poppins';
 
   &:hover {
     cursor: pointer;

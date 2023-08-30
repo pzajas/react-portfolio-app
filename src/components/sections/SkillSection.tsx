@@ -2,8 +2,7 @@ import { styled } from 'styled-components'
 
 import CssIcon from '@assets/icons/Css'
 import {
-  CascadeStylesIcon,
-  GithubIcon,
+  GitIcon,
   JavaScriptIcon,
   ReactAtomIcon,
   ReactIcon,
@@ -20,7 +19,7 @@ const SkillSection = () => {
     { icon: <ReactNativeIcon /> },
     { icon: <ReactQueryIcon /> },
     { icon: <ReactReduxIcon /> },
-    { icon: <GithubIcon /> },
+    { icon: <GitIcon /> },
     { icon: <ReactAtomIcon /> },
     { icon: <CssIcon /> },
     { icon: <JavaScriptIcon /> },
@@ -28,7 +27,7 @@ const SkillSection = () => {
   ]
 
   return (
-    <PrimarySection sectionText="skills">
+    <PrimarySection sectionText="Skills">
       <StyledIconGrid>
         {iconsArray.map((item, index) => (
           <StyledIconWrapper key={index}>{item.icon}</StyledIconWrapper>
